@@ -1,0 +1,44 @@
+.searchbar{
+border: 1px solid black;
+width: 450px;
+
+}
+.searchbar:focus{
+outline: auto;
+border: none;
+}
+.productcard{
+    box-shadow: 0 0 15px gray;
+    transition: 1s;
+    width: 18rem;
+    text-align: justify;
+  }
+  .productcard:hover{
+    transform: scale(1.1);
+    transition: 1s;
+  }
+  .carttable{
+    box-shadow: 0 0 15px gray;
+  }
+  .cartsummary{
+    box-shadow: 0 0 15px gray;
+  }
+  .notfound{
+    /* position: fixed;
+    top: 0; */
+    width: 100vw;
+    height: 100vh;
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .description{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+ .section{
+  padding: 120px 0;
+ }
