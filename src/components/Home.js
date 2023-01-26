@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as productsReducer from "../Redux/products/products.reducer";
 import * as productsActions from "../Redux/products/products.actions";
 import * as cartActions from "../Redux/cart/cart.actions";
+import * as cartReducer from "../Redux/cart/cart.reducer";
 
 
 const Home = () => {
@@ -13,8 +14,13 @@ const Home = () => {
         return state[productsReducer.productsFeatureKey];
     })
 
+    const cartInfo = useSelector((state) => {
+        return state[cartReducer.cartFeatureKey]
+      })
+    
     let { loading, products, errorMessage, searchTerm } = productsInfo;
 
+    let { cart } = cartInfo;
 
     useEffect(() => {
         dispatch(productsActions.fetchProducts())
@@ -29,8 +35,16 @@ const Home = () => {
             products;
 
 
-    const addProductToCart = (product) => {
-        dispatch(cartActions.addToCart(product))
+    const addProductToCart = (newProduct) => {
+
+        let inCart = cart.some((product) => product.id === newProduct.id);
+        if (inCart) {
+            alert("The product already exists in the cart")
+
+        } else {
+            dispatch(cartActions.addToCart(newProduct))
+        }
+      
     }
 
     return (

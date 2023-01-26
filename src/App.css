@@ -1,7 +1,8 @@
 .searchbar{
 border: 1px solid black;
-width: 450px;
-
+}
+.secondDiv{
+  width: 450px;
 }
 .searchbar:focus{
 outline: auto;
@@ -11,7 +12,7 @@ border: none;
     box-shadow: 0 0 15px gray;
     transition: 1s;
     width: 18rem;
-    text-align: justify;
+  
   }
   .productcard:hover{
     transform: scale(1.1);
@@ -42,3 +43,31 @@ border: none;
  .section{
   padding: 120px 0;
  }
+
+
+
+@media screen and (max-width: 768px ) {
+  .productcard{
+    width: auto;
+    margin-top: 30px;
+   }
+ 
+  .firstDiv{
+    order: 1;
+  }
+  .secondDiv{
+   order: 3;
+   width: 550px;
+  }
+  .thirdDiv{
+  order: 2;
+  }
+}
+
+
+
+
+
+
+
+

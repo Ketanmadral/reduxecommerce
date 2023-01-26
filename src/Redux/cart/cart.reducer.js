@@ -11,17 +11,17 @@ export const reducer = (state = initialState, action) => {
 
     switch (type) {
         case cartActions.ADD_TO_CART:
-            let inCart = state.cart.some((product) => product.id === payload.id);
-            if (inCart) {
-                return alert("The product already exists in the cart")
-            } else {
+            // let inCart = state.cart.some((product) => product.id === payload.id);
+            // if (inCart) {
+            //     return alert("The product already exists in the cart")
+
+            // } else {
                 return {
                     cart: [...state.cart, payload]
                 }
-            }
-
-
-        case cartActions.CLEAR_CART:
+            // }
+       
+            case cartActions.CLEAR_CART:
             return {
 
                 cart: []

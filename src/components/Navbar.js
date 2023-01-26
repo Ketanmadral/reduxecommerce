@@ -37,27 +37,27 @@ function Navbar() {
         <div>
            
 
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow py-3 " >
+                <nav className="navbar navbar-dark bg-dark fixed-top shadow py-3" >
                     <div className="container">
 
-                        <NavLink  to="/" className="navbar-brand fst-italic fs-3" onClick={clickToRedirect} >Bigbasket</NavLink>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <NavLink  to="/" className="navbar-brand fst-italic me-auto fs-3  firstDiv" onClick={clickToRedirect} >Bigbasket</NavLink>
+                        {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        </button> */}
+                        {/* <div className="collapse navbar-collapse" id="navbarSupportedContent"> */}
                             {
-                                location.pathname == "/" ? (<ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                                location.pathname == "/" ? (<ul className="navbar-nav mx-auto mb-2 mb-lg-0 secondDiv">
                                     <li className="nav-item">
                                         <form className="d-flex">
 
-                                            <input className="form-control shadow-none searchbar" type="search" value={searchTerm} onChange={clickToSearchProducts} placeholder="Search" />
+                                            <input className="form-control shadow-none searchbar " type="search"  value={searchTerm} onChange={clickToSearchProducts} placeholder="Search" />
 
                                         </form>
                                     </li>
                                 </ul>) : null
                             }
 
-                            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <ul className="navbar-nav ms-auto mb-2 mb-lg-0  thirdDiv">
 
                                 <li className="nav-item">
                                     <NavLink  to="/cart" className="btn btn-sm btn-outline-light position-relative">
@@ -72,7 +72,7 @@ function Navbar() {
                             </ul>
 
 
-                        </div>
+                        {/* </div> */}
                     </div>
                 </nav>
                 <Outlet />

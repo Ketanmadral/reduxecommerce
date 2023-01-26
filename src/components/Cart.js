@@ -50,9 +50,10 @@ const Cart = () => {
           {
             cart.length > 0 ?
               <div className='row'>
-                <div className='col-9'>
+                <div className='col-lg-9'>
+                  <div className='table-responsive'>
                   <table className="table carttable text-center ">
-                    <thead className="table-dark ">
+                    <thead className="table-dark">
                       <tr>
                         <th width="20%">Image</th>
                         <th width="20%">Title</th>
@@ -73,9 +74,10 @@ const Cart = () => {
                               <td className="align-middle">{product.title}</td>
                               <td className="align-middle"><i className="fa fa-rupee"></i> {product.price}</td>
                               <td className="align-middle">
-                                <div className="d-flex">
+                                <div className="d-flex justify-content-center">
                                   <button className="btn btn-white border-0 me-2" type="button" onClick={clickToDecQty.bind(this, product)}><i className="fa fa-minus fs-4 text-danger"></i></button>
-                                  <input type="text" className="form-control shadow-none me-2 text-center  border border-2 border-dark " value={product.quantity} readOnly />
+                                  <span className=" px-3 py-2 align-self-center border border-2 border-dark rounded">{product.quantity}</span>
+                                  {/* <input type="text" className="form-control shadow-none me-2 text-center  border border-2 border-dark"  value={product.quantity} readOnly /> */}
                                   <button className="btn btn-white border-0" type="button" onClick={clickToIncQty.bind(this, product)}><i className="fa fa-plus fs-4 text-danger"></i></button>
                                 </div>
                               </td>
@@ -94,8 +96,9 @@ const Cart = () => {
                       </tr>
                     </tbody>
                   </table>
+                  </div>
                 </div>
-                <div className='col-3'>
+                <div className='col-lg-3'>
                   <div className="card border-0 cartsummary rounded-0">
                     <div className="card-header text-center h5 bg-dark text-white rounded-0">Order Summary</div>
                     <div className="card-body ">
