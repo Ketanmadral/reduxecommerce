@@ -4,18 +4,18 @@ This is a dynamic and user-friendly E-Commerce Shopping built using React, Redux
 
 ## Features
 
-Product listing using third-party API
-Add and remove products from cart
-Increase and decrease product quantity
-Cart state management with Redux
-Responsive and clean UI with React
-Real-time cart updates
+- Product listing using third-party API
+- Add and remove products from cart
+- Increase and decrease product quantity
+- Cart state management with Redux
+- Responsive and clean UI with React
+- Real-time cart updates
 
 ## Installation
 
-Clone the repository
-Run npm install
-Run npm start
+1. Clone the repository
+2. Run npm install
+3. Run npm start
 
 
 
